@@ -112,5 +112,14 @@ namespace SmartDeliveryManagementSystem
         {
             return (Shipment)MemberwiseClone();
         }
+        public virtual Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)MemberwiseClone();
+            copy.Destination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber);
+            return copy;
+        }
     }
 }

@@ -40,6 +40,24 @@ namespace SmartDeliveryManagementSystem
             //Console.WriteLine($"Same DeliveryAddress Object : " +$"{shipment1.Destination == shallowCopy.Destination}");
             #endregion
 
+            #region Question03
+            //DeliveryAddress address = new DeliveryAddress("Cairo", "Salam", 5);
+            //Shipment shipment1 = new StandardShipment("SH001", "Laptop", 3, 80m, address);
+
+            //Shipment deepCopy = shipment1.DeepCopy();
+
+            //Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            //Console.WriteLine($"Copied Shipment Address : {deepCopy.Destination.City}");
+
+            //Console.WriteLine("====================\n");
+            //deepCopy.Destination.City = "Giza";
+
+            //Console.WriteLine($"Original Shipment Address : {shipment1.Destination.City}");
+            //Console.WriteLine($"Copied Shipment Address : {deepCopy.Destination.City}");
+            //Console.WriteLine($"Same DeliveryAddress Object : " + $"{shipment1.Destination == deepCopy.Destination}");
+            #endregion
+
+
         }
 
 
