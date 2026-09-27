@@ -35,6 +35,10 @@
             
             // Question D:
             // Changes made to the copied object don't affect the original object
+
+            // Question E:
+            // When we need to edit both versions of an object without affecting each other.
+      
             #endregion
         }
     }
