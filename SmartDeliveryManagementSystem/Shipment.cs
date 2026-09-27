@@ -86,7 +86,11 @@ namespace SmartDeliveryManagementSystem
             Destination = destination;
             TotalShipmentsCreated++;
         }
-
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
 
         public void UpdateDeliveryFee(decimal newFee)
         {
