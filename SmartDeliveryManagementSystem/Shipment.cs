@@ -10,6 +10,7 @@ namespace SmartDeliveryManagementSystem
         private string _description;
         private double _weight;
         private decimal _deliveryFee;
+        public static int TotalShipmentsCreated = 0;
         public DeliveryAddress Destination { get; set; }
         // should be no set since it doesn't store any value
         abstract public decimal EstimatedCost { get; }
@@ -83,6 +84,7 @@ namespace SmartDeliveryManagementSystem
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
 
