@@ -60,6 +60,22 @@
             // and it can't be inherited, or instantiated
             #endregion
 
+            #region Question04
+            // Question A:
+            // An extension method is a way to add methods to existing types
+            // without modifying the original type or creating a new type
+            // and it's a syntactic sugar for a static method
+
+            // Question B:
+            // The first parameter mus use the this keyword
+
+            // Question C:
+            // An extension method must be declared in a static class
+
+            // Question D:
+            // No, only public members can be accessed
+            #endregion
+
         }
     }
 }
