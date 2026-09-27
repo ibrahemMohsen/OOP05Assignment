@@ -57,6 +57,10 @@ namespace SmartDeliveryManagementSystem
             //Console.WriteLine($"Same DeliveryAddress Object : " + $"{shipment1.Destination == deepCopy.Destination}");
             #endregion
 
+            #region Question06
+            //// note: I commented out the code so it outputs 0 instead of 3
+            //Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+            #endregion
 
         }
 

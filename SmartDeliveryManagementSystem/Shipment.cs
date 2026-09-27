@@ -127,5 +127,10 @@ namespace SmartDeliveryManagementSystem
                 Destination.BuildingNumber);
             return copy;
         }
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
     }
 }
