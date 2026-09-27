@@ -6,6 +6,7 @@ namespace SmartDeliveryManagementSystem
 {
     internal class ExpressShipment : Shipment, ITrackable, IInsurable
     {
+        public override string TrackingStatus { get; set; }
         private decimal _extraFee;
         public decimal ExtraFee
         {
@@ -32,12 +33,16 @@ namespace SmartDeliveryManagementSystem
                 double weight,
                 decimal deliveryFee,
                 DeliveryAddress destination,
-                decimal extraFee
-            ) : base(trackingCode, description, weight, deliveryFee, destination)
+                decimal extraFee,
+                string trackingStatus
+            ) : base(trackingCode, description, weight, deliveryFee, destination, trackingStatus)
         {
             ExtraFee = extraFee;
         }
-
+        public override void UpdateTrackingStatus(string newTrackingStatus)
+        {
+            TrackingStatus = newTrackingStatus;
+        }
         // Already implemented in the last Assignemnt
         public override decimal EstimatedCost
         {

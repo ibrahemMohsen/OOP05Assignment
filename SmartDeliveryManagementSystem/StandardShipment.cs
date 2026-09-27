@@ -6,6 +6,7 @@ namespace SmartDeliveryManagementSystem
 {
     internal class StandardShipment : Shipment, ITrackable, IInsurable
     {
+        public override string TrackingStatus { get; set; }
         // I already call the base class constructor from the last task
         public StandardShipment(string TrackingCode) : base(TrackingCode)
         {
@@ -16,10 +17,15 @@ namespace SmartDeliveryManagementSystem
                 string description,
                 double weight,
                 decimal deliveryFee,
-                DeliveryAddress destination
-            ) : base(trackingCode, description, weight, deliveryFee, destination)
+                DeliveryAddress destination,
+                string trackingStatus
+            ) : base(trackingCode, description, weight, deliveryFee, destination, trackingStatus)
         {
 
+        }
+        public override void UpdateTrackingStatus(string newTrackingStatus)
+        {
+            TrackingStatus = newTrackingStatus;
         }
         public override decimal EstimatedCost
         {

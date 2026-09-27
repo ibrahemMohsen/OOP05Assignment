@@ -71,9 +71,9 @@ namespace SmartDeliveryManagementSystem
 
             #region Question08
             DeliveryAddress address = new DeliveryAddress("Cairo", "Salam", 5);
-            Shipment shipment1 = new StandardShipment("SH001", "Laptop", 3, 80m, address);
-            Shipment shipment2 = new ExpressShipment("SH002", "Laptop", 2, 80m, address, 50);
-            Shipment shipment3 = new InternationalShipment("SH003", "Laptop", 8, 80m, address, "Germany", 100);
+            Shipment shipment1 = new StandardShipment("SH001", "Laptop", 3, 80m, address, "Out For Delivery");
+            Shipment shipment2 = new ExpressShipment("SH002", "Laptop", 2, 80m, address, 50, "In Transit");
+            Shipment shipment3 = new InternationalShipment("SH003", "Laptop", 8, 80m, address, "Germany", 100, "Delivered");
             Console.WriteLine(shipment1.GetSummary());
             Console.WriteLine(shipment1.IsDelivered());
             Console.WriteLine(shipment2.GetSummary());
@@ -81,6 +81,7 @@ namespace SmartDeliveryManagementSystem
             Console.WriteLine(shipment3.GetSummary());
             Console.WriteLine(shipment3.IsDelivered());
             #endregion
+
         }
 
 

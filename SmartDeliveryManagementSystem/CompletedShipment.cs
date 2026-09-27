@@ -6,6 +6,7 @@ namespace SmartDeliveryManagementSystem
 {
     internal sealed class CompletedShipment: Shipment
     {
+        public override string TrackingStatus { get ; set; }
         public CompletedShipment(string trackingCode): base(trackingCode)
         {
 
@@ -15,12 +16,16 @@ namespace SmartDeliveryManagementSystem
                 string description,
                 double weight,
                 decimal deliveryFee,
-                DeliveryAddress destination
-            ): base(trackingCode, description, weight, deliveryFee, destination)
+                DeliveryAddress destination,
+                string trackingStatus
+            ): base(trackingCode, description, weight, deliveryFee, destination, trackingStatus)
         {
 
         }
-
+        public override void UpdateTrackingStatus(string newTrackingStatus)
+        {
+            TrackingStatus = newTrackingStatus;
+        }
         public override decimal EstimatedCost {
             get
             {

@@ -6,6 +6,7 @@ namespace SmartDeliveryManagementSystem
 {
     internal class InternationalShipment : Shipment, ITrackable, IInsurable
     {
+        public override string TrackingStatus { get; set; }
         public string DestinationCountry
         {
             get;
@@ -54,11 +55,16 @@ namespace SmartDeliveryManagementSystem
                 decimal deliveryFee,
                 DeliveryAddress destination,
                 string destinationCountry,
-                decimal customsFee
-            ) : base(trackingCode, description, weight, deliveryFee, destination)
+                decimal customsFee,
+                string trackingStatus
+            ) : base(trackingCode, description, weight, deliveryFee, destination, trackingStatus)
         {
             DestinationCountry = destinationCountry;
             CustomsFee = customsFee;
+        }
+        public override void UpdateTrackingStatus(string newTrackingStatus)
+        {
+            TrackingStatus = newTrackingStatus;
         }
         // Already implemented in the last Assignemnt
         public override decimal EstimatedCost

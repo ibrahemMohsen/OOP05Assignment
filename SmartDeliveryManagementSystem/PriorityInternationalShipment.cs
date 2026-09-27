@@ -21,8 +21,9 @@ namespace SmartDeliveryManagementSystem
                 decimal deliveryFee,
                 DeliveryAddress destination,
                 string destinationCountry,
-                decimal customsFee
-            ) : base(trackingCode, description, weight, deliveryFee, destination, destinationCountry, customsFee)
+                decimal customsFee,
+                string trackingStatus
+            ) : base(trackingCode, description, weight, deliveryFee, destination, destinationCountry, customsFee, trackingStatus)
         {
         }
         public override sealed void GenerateCustomsReport()

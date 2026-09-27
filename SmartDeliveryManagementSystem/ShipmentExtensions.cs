@@ -16,11 +16,11 @@ namespace SmartDeliveryManagementSystem
                 InternationalShipment => "International",
                 _ => "Shipment"
             };
-            return $"{shipment.TrackingCode} | {shipmentType} | {shipment.Weight} | {shipment.GetTrackingStatus()}";
+            return $"{shipment.TrackingCode} | {shipmentType} | {shipment.Weight} | {shipment.TrackingStatus}";
         }
         public static bool IsDelivered(this Shipment shipment)
         {
-            return shipment.GetTrackingStatus().Contains("has been delivered");
+            return shipment.TrackingStatus == "Delivered";
         }
     }
 }

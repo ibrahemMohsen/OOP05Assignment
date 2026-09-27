@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SmartDeliveryManagementSystem
 {
-    abstract class Shipment
+    abstract partial class Shipment
     {
         private string _trackingCode;
         private string _description;
@@ -62,7 +62,7 @@ namespace SmartDeliveryManagementSystem
         }
 
         public Shipment(string trackingCode) :
-            this(trackingCode, "Unknown", 1, 50m, default)
+            this(trackingCode, "Unknown", 1, 50m, default, "Unknown")
 
         {
         }
@@ -71,7 +71,8 @@ namespace SmartDeliveryManagementSystem
                 string description,
                 double weight,
                 decimal deliveryFee,
-                DeliveryAddress destination
+                DeliveryAddress destination,
+                string trackingStatus
             )
         {
             _trackingCode = "Unknown";
@@ -84,6 +85,7 @@ namespace SmartDeliveryManagementSystem
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TrackingStatus = trackingStatus;
             TotalShipmentsCreated++;
         }
         static Shipment()
@@ -131,7 +133,7 @@ namespace SmartDeliveryManagementSystem
         {
             return TotalShipmentsCreated;
         }
-        abstract public string GetTrackingStatus();
+
 
     }
 }
