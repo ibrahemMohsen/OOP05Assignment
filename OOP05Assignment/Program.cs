@@ -76,6 +76,23 @@
             // No, only public members can be accessed
             #endregion
 
+            #region Question05
+            // Question A:
+            // A partial class allows the definition of one class to be split across multiple files
+
+            // Question B:
+            // To organize large classes across multiple files
+            // separate auto-generated code from custom code
+            // allow different developers/tools to extend a class without modifying the same file
+            // improve maintainability and readability
+
+            // Question C:
+            // A partial method is a method declaration that can be declared in one part of a partial class and implemented in another part
+
+            // Question D:
+            // the compiler removes all the method calls
+            #endregion
+
         }
     }
 }
