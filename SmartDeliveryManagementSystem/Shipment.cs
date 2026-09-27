@@ -108,5 +108,9 @@ namespace SmartDeliveryManagementSystem
         {
             return (Shipment)MemberwiseClone();
         }
+        public virtual Shipment ShallowCopy()
+        {
+            return (Shipment)MemberwiseClone();
+        }
     }
 }
