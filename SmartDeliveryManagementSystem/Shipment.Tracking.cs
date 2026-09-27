@@ -10,6 +10,7 @@ namespace SmartDeliveryManagementSystem
         abstract public string TrackingStatus { get; set; }
         abstract public string GetTrackingStatus();
         abstract public void UpdateTrackingStatus(string newTrackingStatus);
+        public partial void OnTrackingStatusChanged(string newStatus);
 
     }
 }

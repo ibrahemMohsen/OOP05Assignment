@@ -101,7 +101,10 @@ namespace SmartDeliveryManagementSystem
                 DeliveryFee = newFee;
             }
         }
-
+        public partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine($"Tracking status changed to: {newStatus}");
+        }
         public void UpdateWeight(double weight)
         {
             Weight = weight;

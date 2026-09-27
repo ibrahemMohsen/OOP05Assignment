@@ -42,6 +42,7 @@ namespace SmartDeliveryManagementSystem
         public override void UpdateTrackingStatus(string newTrackingStatus)
         {
             TrackingStatus = newTrackingStatus;
+            OnTrackingStatusChanged(newTrackingStatus);
         }
         // Already implemented in the last Assignemnt
         public override decimal EstimatedCost
