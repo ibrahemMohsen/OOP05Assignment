@@ -131,6 +131,7 @@ namespace SmartDeliveryManagementSystem
         {
             return TotalShipmentsCreated;
         }
+        abstract public string GetTrackingStatus();
 
     }
 }

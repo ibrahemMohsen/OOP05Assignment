@@ -34,7 +34,7 @@ namespace SmartDeliveryManagementSystem
             return 0.05m * EstimatedCost;
         }
 
-        public string GetTrackingStatus()
+        public override string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready";
         }
