@@ -103,5 +103,10 @@ namespace SmartDeliveryManagementSystem
             Weight = weight + extraPackagingWeight;
         }
         abstract public void PrintShipment();
+
+        public virtual Shipment CopyShipment()
+        {
+            return (Shipment)MemberwiseClone();
+        }
     }
 }
