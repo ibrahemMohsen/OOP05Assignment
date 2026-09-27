@@ -83,9 +83,13 @@ namespace SmartDeliveryManagementSystem
             #endregion
 
             #region Question10
-            DeliveryAddress address = new DeliveryAddress("Cairo", "Salam", 5);
-            Shipment shipment1 = new StandardShipment("SH001", "Laptop", 3, 80m, address, "Out For Delivery");
-            shipment1.UpdateTrackingStatus("Out For Delivery");
+            //DeliveryAddress address = new DeliveryAddress("Cairo", "Salam", 5);
+            //Shipment shipment1 = new StandardShipment("SH001", "Laptop", 3, 80m, address, "Out For Delivery");
+            //shipment1.UpdateTrackingStatus("Out For Delivery");
+            #endregion
+
+            #region Question11
+            // All already demonstrated :)
             #endregion
 
         }
